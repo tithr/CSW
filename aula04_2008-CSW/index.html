@@ -34,7 +34,7 @@
     <p>Aqui temos outra palavra <em>torta</em>, utilizando a tag "em". </p>
     <br>
     <h3>Texto Marcador</h3>
-    <p>Aqui temos uma frase <mark>"me marcaram"</mark>,  que utiliza a tag "mark". </p>
+    <p>Aqui temos uma frase <mark style="background: orange;">"me marcaram"</mark>,  que utiliza a tag "mark". </p>
     <p>Aqui temos uma frase  <mark>"me marcaram também"</mark>,  que utiliza a tag "mark". </p>
     <br>
     <h3>Texto Grande e Pequeno</h3>
@@ -50,6 +50,35 @@
     <br>
     <h3>Texto Sobrescrito</h3>
     <p>Aqui temos uma frase <sup>sobrescrito</sup>, versão semântica</p>
+    <br>
+    <h3>Pograma</h3>
+    <p>Aqui temos uma calculadora <pre><code>    
+    def celsius_to_fahrenheit(c: float) -> float:
+        return c * 9 / 5 + 32
+    
+    def fahrenheit_to_celsius(f: float) -> float:
+        return (f - 32) * 5 / 9
+    
+    if __name__ == "__main__":
+        escala = input("Digite a unidade de origem (C para Celsius ou F para Fahrenheit): ").strip().upper()
+        try:
+            valor = float(input("Digite o valor da temperatura: ").strip())
+        except ValueError:
+            print("Valor numérico inválido.")
+            exit(1)
+    
+        if escala == "C":
+            convertido = celsius_to_fahrenheit(valor)
+            print(f"{valor:.2f} °C equivalem a {convertido:.2f} °F")
+        elif escala == "F":
+            convertido = fahrenheit_to_celsius(valor)
+            print(f"{valor:.2f} °F equivalem a {convertido:.2f} °C")
+        else:
+            print("Escala não reconhecida. Use 'C' ou 'F'.")
+    </code></pre></p>
+    br>
+    <h3>Livro</h3>
+    <p>Aqui temos uma frase <blockquote>https://dlivros.com/livro/rainha-charlotte-historia-bridgerton-julia-quinn</blockquote>, versão semântica</p>
 
 </body>
 </html>
